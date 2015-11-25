@@ -3,22 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Ajouter un client</title>
     </h:head>
     <h:body>
         <h1>Ajouter un client</h1>
         <h:form>
             <h:panelGrid columns="2" >
                 <h:outputLabel for="customerNumero">Numéro:</h:outputLabel>
-                <h:inputText id="customerNumero" value="" required="true" requiredMessage="Erreur: Veuillez saisir un numéro."/>
+                <h:inputText id="customerNumero" value="#{customerCreateBean.number}" required="true" requiredMessage="Erreur: Veuillez saisir un numéro."/>
                 <h:outputLabel for="customerFirstName">Nom:</h:outputLabel>
-                <h:inputText id="customerFirstName" value="" required="true" requiredMessage="Erreur: Veuillez saisir un nom."/>
+                <h:inputText id="customerFirstName" value="#{customerCreateBean.firstName}" required="true" requiredMessage="Erreur: Veuillez saisir un nom."/>
                 <h:outputLabel for="customerLastName">Prénom:</h:outputLabel>
-                <h:inputText id="customerLastName" value="" required="true" requiredMessage="Erreur: Veuillez saisir un prénom."/>
+                <h:inputText id="customerLastName" value="#{customerCreateBean.lastName}" required="true" requiredMessage="Erreur: Veuillez saisir un prénom."/>
             </h:panelGrid>
 
             <h:commandButton value="Réinitialiser" type="reset" />
-            <h:commandButton value="Valider" type="submit" />
+            <h:commandButton action="#{customerCreateBean.addCustomer()}" value="Valider" type="submit" />
             <h:button value="Annuler" outcome="/customersList.xhtml" />
         </h:form>
     </h:body>
