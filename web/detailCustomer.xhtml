@@ -9,9 +9,9 @@
     <h:body>
         <h1>Détail du client</h1>
         <h:outputText value="Numéro: "/>
-        <h:outputText styleClass="output" value="#{customerDetailBean.number}"/>
+        <h:outputText styleClass="output" value="#{customerDetailBean.number}"/><br />
         <h:outputText value="Prénom: "/>
-        <h:outputText styleClass="output" value="#{customerDetailBean.firstName}"/>
+        <h:outputText styleClass="output" value="#{customerDetailBean.firstName}"/><br />
         <h:outputText value="Nom: "/>
         <h:outputText styleClass="output" value="#{customerDetailBean.lastName}"/>
         
@@ -40,9 +40,11 @@
                     <f:facet name="header">
                         <h:outputText value="Action"/>  
                     </f:facet>
+                    <h:commandLink value="Détail" action="#{customerDetailBean.detailAccount(account.number, customerDetailBean.number)}"></h:commandLink>
                 </h:column>
-            </h:dataTable>  
-            <h:button value="Ajouter" outcome="/createCustomer.xhtml" />
+            </h:dataTable>
+            <!--<h:commandButton value="Ajouter un nouveau compte" action="#{customerDetailBean.addAccount(customer.number)}"></h:commandButton>-->
+            <h:button value="Retour à la page d'accueil" outcome="/customersList.xhtml" />
         </h:form>
     </h:body>
 </html>
