@@ -7,6 +7,7 @@ package ch.hearc.ig.odi.customeraccount.business.service;
 
 import ch.hearc.ig.odi.customeraccount.business.service.Services;
 import java.io.Serializable;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -16,7 +17,7 @@ import javax.inject.Named;
  * @author maximili.jeannere
  */
 @Named
-@SessionScoped
+@RequestScoped
 
 // Lié à une page (un formulaire par exemple). Couche de services permettant de ne pas avoir une classe services trop grandes
 public class CustomerCreateBean implements Serializable{
