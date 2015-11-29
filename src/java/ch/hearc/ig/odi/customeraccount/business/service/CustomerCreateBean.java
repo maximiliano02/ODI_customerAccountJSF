@@ -5,11 +5,8 @@
  */
 package ch.hearc.ig.odi.customeraccount.business.service;
 
-import ch.hearc.ig.odi.customeraccount.business.Customer;
 import ch.hearc.ig.odi.customeraccount.business.service.Services;
 import java.io.Serializable;
-import java.util.List;
-import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
