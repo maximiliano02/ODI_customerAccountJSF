@@ -62,9 +62,13 @@ public class Bank {
         public void CreateCustomers(){
             Customer cust = new Customer(1, "Jean", "Dupont");
             addCustomer(cust);
+            addAccount("1", "Salaire", 0.001, cust);
+            addAccount("2", "Impots", 0.002, cust);
             
             Customer cust2 = new Customer(2, "Marie", "Froideveau");
             addCustomer(cust2);
+            addAccount("3", "Epargne", 0.002, cust2);
+            addAccount("4", "Salaire", 0.001, cust2);
             
             Customer cust3 = new Customer(3, "Alex", "Dupertuis");
             addCustomer(cust3);
