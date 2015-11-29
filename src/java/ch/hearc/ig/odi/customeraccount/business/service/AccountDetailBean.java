@@ -32,7 +32,7 @@ public class AccountDetailBean implements Serializable{
 
     public String returnToCustomer(){
         CustomerBean customerBean = Tools.findBean("customerBean", CustomerBean.class);
-        customerBean.editCustomer(numCustomer);
+        customerBean.displayCustomer(numCustomer);
         return "success";
     }
 

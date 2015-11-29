@@ -26,7 +26,7 @@
                     <f:facet name="header">
                         <h:outputText value="Action"/>  
                     </f:facet>
-                    <h:commandLink value="Editer" action="#{customerBean.editCustomer(customer.number)}"></h:commandLink>
+                    <h:commandLink value="Editer" action="#{customerBean.displayCustomer()}"></h:commandLink>
                 </h:column>
             </h:dataTable>  
             <h:button value="Ajouter" outcome="/createCustomer.xhtml" />
