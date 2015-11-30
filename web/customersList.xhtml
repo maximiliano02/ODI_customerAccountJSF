@@ -8,7 +8,7 @@
     </h:head>
     <h:body>
         <h:form>
-            <h1>Liste des clients</h1>
+            <h1>#{msg['customersListTitle']}</h1>
             <h:dataTable var="customer" value="#{customerBean.customers}"  >                
                 <h:column>
                     <f:facet name="header">
@@ -26,10 +26,10 @@
                     <f:facet name="header">
                         <h:outputText value="Action"/>  
                     </f:facet>
-                    <h:commandLink value="Détail" action="#{customerBean.displayCustomer(customer.number)}"></h:commandLink>
+                    <h:commandLink value="Détail" action="#{customerBean.displayCustomer(customer)}"></h:commandLink>
                 </h:column>
             </h:dataTable>  
-            <h:button value="Ajouter" outcome="/createCustomer.xhtml" />
+            <h:button value="#{msg['addBtn']}" outcome="/createCustomer.xhtml" />
         </h:form>
     </h:body>
 </html>

@@ -8,13 +8,13 @@
     <h:body>
         <h1>Détail du compte</h1>
         <h:outputText value="Numéro: "/>
-        <h:outputText styleClass="output" value="#{accountDetailBean.number}"/><br />
+        <h:outputText styleClass="output" value="#{accountDetailBean.account.number}"/><br />
         <h:outputText value="Libellé: "/>
-        <h:outputText styleClass="output" value="#{accountDetailBean.name}"/><br />
+        <h:outputText styleClass="output" value="#{accountDetailBean.account.name}"/><br />
         <h:outputText value="Solde: "/>
-        <h:outputText styleClass="output" value="#{accountDetailBean.balance}"/><br />
+        <h:outputText styleClass="output" value="#{accountDetailBean.account.balance}"/><br />
         <h:outputText value="Taux d'intérêt: "/>
-        <h:outputText styleClass="output" value="#{accountDetailBean.rate}"/><br />
+        <h:outputText styleClass="output" value="#{accountDetailBean.account.rate}"/><br />
         <h:form>   
             <h:commandButton value="Retour au client" action="#{accountDetailBean.returnToCustomer()}"></h:commandButton>
         </h:form>

@@ -47,14 +47,10 @@ public class CustomerBean implements Serializable{
      * @param number
      * @return
      */
-    public String displayCustomer(int number){
+    public String displayCustomer(Customer customer){
         CustomerDetailBean customerDetailBean = Tools.findBean("customerDetailBean", CustomerDetailBean.class);
-        
-        Customer customer = services.getCustomer(number);        
-        customerDetailBean.setNumber(customer.getNumber());
-        customerDetailBean.setFirstName(customer.getFirstName());
-        customerDetailBean.setLastName(customer.getLastName());
-        customerDetailBean.setAccounts(new ArrayList(customer.getAccounts().values()));
+        // Customer customer = services.getCustomer(number); En passant directment le client, il n'y a plus besoin de le rechercher    
+        customerDetailBean.setCustomer(customer);
         
         return "success";
     }
