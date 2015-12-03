@@ -15,7 +15,7 @@ import javax.enterprise.context.SessionScoped;
  * @author julien.plumez
  */
 @SessionScoped
-@Stateful
+@Stateful // Quand il ne s'agit pas d'un bean, il faut spécifié stateful ou stateless. Le @Named et la scoped permet de ne pas le spécifier pour les beans
 public class Services implements Serializable{
     
     private Bank bank;
