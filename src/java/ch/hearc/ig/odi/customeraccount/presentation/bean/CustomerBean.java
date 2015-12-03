@@ -42,7 +42,7 @@ public class CustomerBean implements Serializable{
     }
     
     /**
-     * Affiche le détail d'un client
+     * Affiche le détail d'un client (Obsolète), il est plus facile d'appeler les bon bean dans l'action du bouton
      * 1. Récupération du bean pouvant afficher le détail du client (customerDetailBean)
      * 2. Récupère le client par son numero et set le customerDetailBean
      * 3. Retourne de la chaine succès pour une redirection

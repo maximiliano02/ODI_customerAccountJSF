@@ -12,8 +12,6 @@ import ch.hearc.ig.odi.customeraccount.business.service.Tools;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -23,15 +21,28 @@ import javax.inject.Named;
  * @author maximili.jeannere
  */
 @Named(value="customerDetailBean")
-@SessionScoped
+@SessionScoped // Obligation d'être en session car appelé dans la liste de customer
 public class CustomerDetailBean implements Serializable{
 
     @Inject Services services;
 
     private Customer customer;
     
-    public CustomerDetailBean(){
-        customer = new Customer();
+    public CustomerDetailBean(){}
+    
+    /**
+     * Méthode qui reçoit le client à afficher sur la page.
+     * @param customer Le client à afficher
+     * @return "success" si le client est valide, "error" si le paramètre est null
+     */
+    public String showCustomer(Customer customer){
+        if(customer != null){
+            this.customer = customer;
+            return "success";
+        }else{
+            this.customer = null;
+            return "error";
+        }
     }
     
     /**
