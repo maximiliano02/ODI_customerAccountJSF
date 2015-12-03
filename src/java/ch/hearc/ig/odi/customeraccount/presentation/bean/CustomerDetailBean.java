@@ -46,7 +46,7 @@ public class CustomerDetailBean implements Serializable{
     }
     
     /**
-     * Set le compte du bean detail compte
+     * Set le compte du bean detail compte (Obsolète)
      * @param account
      * @return 
      */

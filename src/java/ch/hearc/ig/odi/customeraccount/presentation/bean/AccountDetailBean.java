@@ -20,7 +20,7 @@ import javax.inject.Named;
  * @author maximili.jeannere
  */
 @Named(value="accountDetailBean")
-@SessionScoped
+@SessionScoped // Session obligatoire comme pour detailCustomer
 public class AccountDetailBean implements Serializable{
 
     @Inject Services services;
@@ -29,6 +29,22 @@ public class AccountDetailBean implements Serializable{
     
     public AccountDetailBean(){
         
+    }
+    
+    /**
+     * Méthode qui reçoit le compte à afficher sur la page.
+     * @param account Le compte à afficher
+     * @return "success" si le paramètre est correct, "error" s'il est null.
+     */
+    public String showAccount(Account account){
+        if(account != null){
+            this.account = account;
+            return "success";
+        }else{
+            this.account = null;
+            return "error";
+        }
+            
     }
 
     public String returnToCustomer(){

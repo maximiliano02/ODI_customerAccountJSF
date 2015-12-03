@@ -46,7 +46,13 @@
    <navigation-rule>
         <from-view-id>/detailCustomer.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>success</from-outcome>
+            <from-action>#{accountDetailBean.showAccount(account)}</from-action> <!-- Sur l'action -->    
+            <from-outcome>success</from-outcome> <!-- Si succès -->
+            <to-view-id>/detailAccount.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{accountDetailBean.showAccount(account)}</from-action>          
+            <from-outcome>error</from-outcome>
             <to-view-id>/detailAccount.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
